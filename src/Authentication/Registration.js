@@ -44,11 +44,8 @@ const Registration = () => {
               </button>
             </label>
           </div>
-          <Link
-            to="/"
-            className="btn btn-secondary font-bold text-white text-base mt-5"
-          >
-            Login
+          <Link to="/" className="BTN mt-5">
+            Sign up
           </Link>
           <p>
             Already have an account?{" "}

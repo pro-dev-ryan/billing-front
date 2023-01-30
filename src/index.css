@@ -17,4 +17,7 @@
   .Field {
     @apply focus:outline-none w-full;
   }
+  .BTN {
+    @apply btn hover:bg-gray-600 border-none;
+  }
 }

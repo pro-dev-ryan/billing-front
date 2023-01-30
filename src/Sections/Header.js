@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <div className="flex justify-between m-1 bg-gray-100">
+      <div className="flex justify-between m-1 mt-2 bg-gray-100">
         <div className="form-control">
           <input
             type="text"
@@ -13,7 +13,9 @@ const Header = () => {
         </div>
 
         <div className="flex-none">
-          <button className="btn">Add New Bill</button>
+          <label htmlFor="update-data" className="BTN">
+            Add New Bill
+          </label>
         </div>
       </div>
     </div>

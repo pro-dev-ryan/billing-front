@@ -34,7 +34,7 @@ const Login = () => {
               </button>
             </label>
           </div>
-          <Link to="/" className="btn mt-5">
+          <Link to="/" className="BTN mt-5">
             Login
           </Link>
           <p>

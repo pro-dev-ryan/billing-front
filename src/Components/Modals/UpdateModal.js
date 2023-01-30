@@ -55,10 +55,10 @@ const UpdateModal = () => {
             </form>
           </div>
           <div className="modal-action">
-            <label htmlFor="update-data" className="btn">
+            <label htmlFor="update-data" className="BTN">
               Cancel
             </label>
-            <label htmlFor="update-data" className="btn">
+            <label htmlFor="update-data" className="BTN">
               Update
             </label>
           </div>
