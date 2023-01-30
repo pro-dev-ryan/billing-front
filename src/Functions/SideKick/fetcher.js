@@ -1,23 +1,25 @@
 import axios from "axios";
 
 export const infos = async () => {
-  const fetch = await axios.get("http://localhost:5000/api/billing-list");
-  const res = await fetch.json();
-  return res;
+  const fetch = await axios.get(
+    " https://billing-backend-eight.vercel.app/api/billing-list"
+  );
+
+  return fetch?.data;
 };
 export const infosDelete = async (id) => {
   const fetch = await axios.delete(
-    `http://localhost:5000/api/delete-billing${id}`,
+    ` https://billing-backend-eight.vercel.app/api/delete-billing${id}`,
     {
       method: "DELETE",
     }
   );
-  const res = await fetch.json();
-  return res;
+
+  return fetch?.data;
 };
 export const infosUpdate = async (id, body) => {
-  const fetch = await axios.get(
-    `http://localhost:5000/api/update-billing/${id}`,
+  const fetch = await axios.put(
+    ` https://billing-backend-eight.vercel.app/api/update-billing/${id}`,
     {
       method: "PUT",
       headers: {
@@ -26,17 +28,19 @@ export const infosUpdate = async (id, body) => {
       body: JSON.stringify(body),
     }
   );
-  const res = await fetch.json();
-  return res;
+
+  return fetch?.data;
 };
 export const addInfos = async (body) => {
-  const fetch = await axios.get(`http://localhost:5000/api/add-billing`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  const res = await fetch.json();
-  return res;
+  const fetch = await axios.post(
+    ` https://billing-backend-eight.vercel.app/api/add-billing`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }
+  );
+  return fetch?.data;
 };

@@ -1,8 +1,11 @@
 import React from "react";
 import UpdateModal from "./Components/Modals/UpdateModal";
+import { useData } from "./Functions/Context/DataContext";
 import Header from "./Sections/Header";
 
 const Home = () => {
+  const { data, isLoading } = useData();
+  console.log(data, isLoading);
   return (
     <>
       <Header />
