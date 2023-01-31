@@ -8,6 +8,7 @@ const DataContext = ({ children }) => {
     queryKey: "data",
     queryFn: infos,
   });
+  console.log(data);
   const value = { data, isLoading, refetch };
   return <ContextData.Provider value={value}>{children}</ContextData.Provider>;
 };

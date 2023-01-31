@@ -4,8 +4,8 @@ import { useData } from "./Functions/Context/DataContext";
 import Header from "./Sections/Header";
 
 const Home = () => {
-  const { data, isLoading } = useData();
-  console.log(data, isLoading);
+  // const { data: rowsData, isLoading } = useData();
+  // rowsData.map((row) => console.log(row));
   return (
     <>
       <Header />
@@ -24,30 +24,37 @@ const Home = () => {
           </thead>
           <tbody>
             {/* <!-- row 1 --> */}
-            <tr>
-              <td className="CL">ID</td>
-              <td className="CL">FN</td>
-              <td className="CL">Email</td>
-              <td className="CL">phone</td>
-              <td className="CL">Amount</td>
-              <td className="CL">
-                <div>
-                  <label
-                    htmlFor="update-data"
-                    className="text-lg font-medium hover:text-gray-600 "
-                  >
-                    Edit
-                  </label>{" "}
-                  ||{" "}
-                  <label
-                    htmlFor="my-modal-6"
-                    className="text-lg font-medium hover:text-gray-600 "
-                  >
-                    Delete
-                  </label>
-                </div>
-              </td>
-            </tr>
+            {/* {!rowsData ? (
+              <p className="text-lg font-semibold">Loading...</p>
+            ) : (
+              rowsData.map((row, i) => {
+                <tr key={i}>
+                  <td className="CL">{row?._id}</td>
+                  <td className="CL">{row?.body?.name}</td>
+                  <td className="CL">Email</td>
+                  <td className="CL">phone</td>
+                  <td className="CL">Amount</td>
+                  <td className="CL">
+                    <div>
+                      <label
+                        htmlFor="update-data"
+                        className="text-lg font-medium hover:text-gray-600 "
+                      >
+                        Edit
+                      </label>{" "}
+                      ||{" "}
+                      <label
+                        htmlFor="my-modal-6"
+                        className="text-lg font-medium hover:text-gray-600 "
+                      >
+                        Delete
+                      </label>
+                    </div>
+                  </td>
+                </tr>;
+                console.log(row);
+              })
+            )} */}
           </tbody>
         </table>
         <UpdateModal />
